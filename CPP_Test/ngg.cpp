@@ -14,8 +14,6 @@ int main()
     display();
     
     gameloop(num, guess, tries);
-    
-    return 0;
 }
 
 void display() {
