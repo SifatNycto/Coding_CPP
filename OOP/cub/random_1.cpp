@@ -40,38 +40,86 @@
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+// class Box {
+//     private:
+//         float height;
+//         float width;
+//         float depth;
+
+//     public:
+//         void setvalues(float h, float w, float d) {
+//             height = h;
+//             width = w;
+//             depth = d;
+//         }
+
+//         void display() {
+//             std::cout << height << std::endl;
+//             std::cout << width << std::endl;
+//             std::cout << depth << std::endl;
+//         }
+
+//         float calculateVolume() {
+//             return height * width * depth;
+//         }
+// };
+
+// int main()
+// {
+//     Box mybox;
+//     mybox.setvalues(5.0, 4.0, 3.0);
+
+//     mybox.display();
+
+//     std::cout << mybox.calculateVolume() << std::endl;
+
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
 class Box {
-    private:
-        float height;
-        float width;
-        float depth;
+public:
+    float height;
+    float width;
+    float depth;
 
-    public:
-        void setvalues(float h, float w, float d) {
-            height = h;
-            width = w;
-            depth = d;
-        }
+    // Default constructor
+    Box() {
+        cout << "Default constructor called" << endl;
+    }
 
-        void display() {
-            std::cout << height << std::endl;
-            std::cout << width << std::endl;
-            std::cout << depth << std::endl;
-        }
+    // Parameterized constructor calling default constructor
+    Box(float h, float w, float d) : Box() { // Delegation
+        height = h;
+        width = w;
+        depth = d;
 
-        float calculateVolume() {
-            return height * width * depth;
-        }
+        cout << "Parameterized constructor called" << endl;
+    }
+
+    float calculateVolume() {
+        return height * width * depth;
+    }
 };
 
 int main()
 {
-    Box mybox;
-    mybox.setvalues(5.0, 4.0, 3.0);
-
-    mybox.display();
-
-    std::cout << mybox.calculateVolume() << std::endl;
+    Box mybox(5,4,3);
+    cout << "Volume: " << mybox.calculateVolume() << endl;
 
     return 0;
 }
