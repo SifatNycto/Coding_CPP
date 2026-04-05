@@ -202,44 +202,111 @@
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.
 
 // Constructor Overloading >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>...
+// class Box {
+//     public:
+//         float height;
+//         float width;
+//         float depth;
+
+//         // Box() {
+//         //     std::cout << "This is the default constructor" << std::endl;
+//         // }
+
+//         Box(float height, float width, float depth) {
+//             this->height = height;
+//             this->width = width;
+//             this->depth = depth;
+//         }
+
+//         Box(Box &ori_obj) {
+//             std::cout << "This is the parameterized constructor" << std::endl << std::endl;
+//             this-> height = ori_obj.height;
+//             this-> width = ori_obj.width;
+//             this-> depth = ori_obj.depth;
+            
+//             std::cout << "Height: " << height << std::endl;
+//             std::cout << "Width: " << width << std::endl;
+//             std::cout << "Depth: " << depth << std::endl;
+//         }
+
+//         float calculateVolume() {
+//             return height * width * depth;
+//         }
+// };
+
+// int main()
+// {
+//     Box mybox(5.0, 4.0, 3.0);
+//     Box mybox_2(mybox);
+
+//     std::cout << "Volume: " << mybox_2.calculateVolume() << std::endl;
+
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 class Box {
+    
     public:
         float height;
         float width;
         float depth;
 
-        // Box() {
-        //     std::cout << "This is the default constructor" << std::endl;
-        // }
+    
 
         Box(float height, float width, float depth) {
+            std::cout << "Parameterized constructor" << std::endl;
+            std::cout << "constructor called " << std::endl;
+
             this->height = height;
             this->width = width;
             this->depth = depth;
-        }
 
-        Box(Box &ori_obj) {
-            std::cout << "This is the parameterized constructor" << std::endl << std::endl;
-            this-> height = ori_obj.height;
-            this-> width = ori_obj.width;
-            this-> depth = ori_obj.depth;
-            
             std::cout << "Height: " << height << std::endl;
             std::cout << "Width: " << width << std::endl;
             std::cout << "Depth: " << depth << std::endl;
         }
 
+        Box(Box &obj) {
+            std::cout << "Customized copy constructor" << std::endl;
+
+            this->height = obj.height;
+            this->width = obj.width;
+            this->depth = obj.depth;
+
+            std::cout << "Height: " << height << std::endl;
+            std::cout << "Width: " << width << std::endl;
+            std::cout << "Depth: " << depth << std::endl;
+        }
+        
+        
         float calculateVolume() {
             return height * width * depth;
+        }
+
+        ~Box() {
+            std::cout << "Default destructor called" << std::endl;
         }
 };
 
 int main()
 {
-    Box mybox(5.0, 4.0, 3.0);
-    Box mybox_2(mybox);
+    
+    Box mybox(5.0, 78.0, 3.0);
+    //Box mybox3(mybox);
+    
+    std::cout << "Volume: " << mybox.calculateVolume() << std::endl;
 
-    std::cout << "Volume: " << mybox_2.calculateVolume() << std::endl;
-
+    std::cout << "main function" << std::endl;
     return 0;
 }
+
+

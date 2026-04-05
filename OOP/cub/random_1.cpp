@@ -88,38 +88,66 @@
 
 
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
+
+// class Box {
+// public:
+//     float height;
+//     float width;
+//     float depth;
+
+//     // Default constructor
+//     Box() {
+//         cout << "Default constructor called" << endl;
+//     }
+
+//     // Parameterized constructor calling default constructor
+//     Box(float h, float w, float d) : Box() { // Delegation
+//         height = h;
+//         width = w;
+//         depth = d;
+
+//         cout << "Parameterized constructor called" << endl;
+//     }
+
+//     float calculateVolume() {
+//         return height * width * depth;
+//     }
+// };
+
+// int main()
+// {
+//     Box mybox(5,4,3);
+//     cout << "Volume: " << mybox.calculateVolume() << endl;
+
+//     return 0;
+// }
 
 class Box {
-public:
-    float height;
-    float width;
-    float depth;
-
-    // Default constructor
-    Box() {
-        cout << "Default constructor called" << endl;
-    }
-
-    // Parameterized constructor calling default constructor
-    Box(float h, float w, float d) : Box() { // Delegation
-        height = h;
-        width = w;
-        depth = d;
-
-        cout << "Parameterized constructor called" << endl;
-    }
-
-    float calculateVolume() {
-        return height * width * depth;
-    }
+    public:
+        float height;
+        float width;
+        float depth;
+        
+        
 };
+Box::Box() {
+    std::cout << "I'm default constructor" << std::endl;
+}
+
+void Box::thid(float h, float w, float d) {
+    this->height = h;
+    width = w;
+    depth = d;
+}
+
+float Box::calculateVolume() {
+    return height * width * depth;
+}
 
 int main()
 {
-    Box mybox(5,4,3);
-    cout << "Volume: " << mybox.calculateVolume() << endl;
+    Box mybox(5, 4, 3);
 
-    return 0;
 }
