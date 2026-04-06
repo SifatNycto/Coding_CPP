@@ -1,0 +1,16 @@
+# This is Git Ignore
+
+# Executables
+*.exe
+*.out
+*.o
+
+# Logs
+*.log
+
+# VS Code
+.vscode/
+
+# Temporary files
+*.tmp
+*.cache
