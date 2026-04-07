@@ -22,14 +22,14 @@
 
 // };
 
-int main()
-{
-    Dog d;
+// int main()
+// {
+//     Dog d;
     
-    d.Run();
+//     d.Run();
     
-    return 0;
-}
+//     return 0;
+// }
 
 
 
