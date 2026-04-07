@@ -22,38 +22,40 @@
 
 // };
 
-// int main()
-// {
-//     Dog d;
+int main()
+{
+    Dog d;
     
-//     d.Run();
+    d.Run();
     
-//     return 0;
-// }
+    return 0;
+}
 
 
 
 
 
-// class Employee {
-//     private:
-//         int salary;
-//     public:
-//         Employee() : salary(5000) {}
+class Employee {
+    private:
+        int salary;
+    public:
+        Employee() : salary(5000) {}
 
-//         int setSalary() {
-//             return salary;
-//         }
+        int setSalary() {
+            return salary;
+        }
 
-// };
+};
 
-// int main()
-// {
-//     Employee e;
+//...........
 
-//     std::cout << e.setSalary();
-//     return 0;
-// }
+int main()
+{
+    Employee e;
+
+    std::cout << e.setSalary();
+    return 0;
+}
 
 
 
