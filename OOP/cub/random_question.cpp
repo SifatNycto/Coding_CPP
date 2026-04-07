@@ -56,9 +56,3 @@ int main()
     std::cout << e.setSalary();
     return 0;
 }
-
-
-
-
-
-
