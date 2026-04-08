@@ -34,7 +34,6 @@
 
 
 
-
 class Employee {
     private:
         int salary;
