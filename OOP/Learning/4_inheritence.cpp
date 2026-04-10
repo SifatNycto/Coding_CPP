@@ -70,7 +70,7 @@ and then the parent classes memory is deallocated.......*/
 
 
 
-
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
 // Multi-level inheritance.................
@@ -113,7 +113,7 @@ and then the parent classes memory is deallocated.......*/
 
 
 
-
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
 // Multiple inheritance .......................
@@ -164,47 +164,113 @@ and then the parent classes memory is deallocated.......*/
 // from 1 parent to 2 childs
 // from one parent class to multiple child class is inherited
 
+// class Person {
+//     public:
+//         std::string name;
+//         int age;
+// };
+
+// class Student : public Person {
+// public:
+//     int rollno;
+//     void displayInfo() {
+//         std::cout << "Name: " << name << std::endl;
+//         std::cout << "Age: " << age << std::endl;
+//         std::cout << "Roll: " << rollno << std::endl;
+//     }    
+// };
+
+// class Teacher : public Person {
+// public:
+//     double salary;
+//     void displayInfo() {
+//         std::cout << "Name: " << name << std::endl;
+//         std::cout << "Age: " << age << std::endl;
+//         std::cout << "Salary: " << salary << std::endl;
+//     }
+// };
+
+// int main()
+// {
+//     Student s1;
+//     s1.name = "Tony Stark";
+//     s1.age = 21;
+//     s1.rollno = 1234;
+    
+//     Teacher t1;
+//     t1.age = 27;
+//     t1.name = "Howard Stark";
+//     t1.salary = 120000;
+
+//     s1.displayInfo();
+//     std::cout << std::endl;
+//     t1.displayInfo();
+
+//     return 0;
+// }
+
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// Hybrid Inheritance ...................................
+// Mixed Inheritance of single, multi-level, multiple, hirarchial.....
+
+// Base class person, Parent...
 class Person {
     public:
         std::string name;
         int age;
+
+        Person() {
+            std::cout << std::endl << "I'm Person, base Class the 'Parent'";
+        }
 };
 
+// Student derived from person
 class Student : public Person {
-public:
-    int rollno;
-    void displayInfo() {
-        std::cout << "Name: " << name << std::endl;
-        std::cout << "Age: " << age << std::endl;
-        std::cout << "Roll: " << rollno << std::endl;
-    }    
+    public:
+        int rollno;
+
+        Student() {
+            std::cout << std::endl << "I'm Student Class, derived from Person Class";
+        }
 };
 
+// teacher derived from person
 class Teacher : public Person {
-public:
-    double salary;
-    void displayInfo() {
-        std::cout << "Name: " << name << std::endl;
-        std::cout << "Age: " << age << std::endl;
-        std::cout << "Salary: " << salary << std::endl;
-    }
+    public:
+        double salary;
+
+        Teacher() {
+            std::cout << std::endl << "I'm Teacher Class, deriver from Person Class";
+        }
+};
+
+// gradstudent deriver from student || child
+class GradStudent : public Student {
+    public:
+        std::string researchArea;
+
+        GradStudent() {
+            std::cout << std::endl << "I'm GradStudent, derived form Student Class";
+        }
+};
+
+// TA derived from student and teacher || child
+class TA : public Student, public Teacher {
+    public:
+        std::string subject;
+
+        TA() {
+            std::cout << std::endl << "I'm TA, derived from Student & Teacher Class";
+        }
 };
 
 int main()
 {
-    Student s1;
-    s1.name = "Tony Stark";
-    s1.age = 21;
-    s1.rollno = 1234;
     
-    Teacher t1;
-    t1.age = 27;
-    t1.name = "Howard Stark";
-    t1.salary = 120000;
-
-    s1.displayInfo();
-    std::cout << std::endl;
-    t1.displayInfo();
+    
 
     return 0;
 }
