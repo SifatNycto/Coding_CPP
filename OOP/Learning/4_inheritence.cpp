@@ -12,7 +12,8 @@ and then the parent classes memory is deallocated.......*/
 // Private properties and private methods can't be inherit
 
 
-// Single inheritance.......................
+// Single or single level inheritance.......................////////////////
+// Base class...............
 // class Person {
 //     public:
 //         std::string name;
@@ -162,37 +163,48 @@ and then the parent classes memory is deallocated.......*/
 // Hirarchial inheritance.......................
 // from 1 parent to 2 childs
 // from one parent class to multiple child class is inherited
-class Student {
+
+class Person {
     public:
         std::string name;
-        int roll;
-        Student() {
-            std::cout << "I'm Student Class" << std::endl;
-        }
+        int age;
 };
-class Teacher {
-    public:
-        std::string subject;
-        double salary;
-        Teacher() {
-            std::cout << "I'm Teacher Class" << std::endl;
-        }
+
+class Student : public Person {
+public:
+    int rollno;
+    void displayInfo() {
+        std::cout << "Name: " << name << std::endl;
+        std::cout << "Age: " << age << std::endl;
+        std::cout << "Roll: " << rollno << std::endl;
+    }    
 };
-class TA : public Student, public Teacher {
-    public:
-        TA() {
-            std::cout << "I'm TA Class" << std::endl;
-        }
+
+class Teacher : public Person {
+public:
+    double salary;
+    void displayInfo() {
+        std::cout << "Name: " << name << std::endl;
+        std::cout << "Age: " << age << std::endl;
+        std::cout << "Salary: " << salary << std::endl;
+    }
 };
 
 int main()
 {
-    TA t1;
-    t1.name = "Tony Stark";
-    t1.subject = "Engineering";
+    Student s1;
+    s1.name = "Tony Stark";
+    s1.age = 21;
+    s1.rollno = 1234;
+    
+    Teacher t1;
+    t1.age = 27;
+    t1.name = "Howard Stark";
+    t1.salary = 120000;
 
-    std::cout << t1.name << std::endl;
-    std::cout << t1.subject << std::endl;
+    s1.displayInfo();
+    std::cout << std::endl;
+    t1.displayInfo();
 
     return 0;
 }
