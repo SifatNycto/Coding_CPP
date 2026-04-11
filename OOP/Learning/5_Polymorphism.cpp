@@ -8,12 +8,18 @@ they are used.
 */
 // Two types:
 // 1. Compile Time Polymorphism
-// 2. Run Time Polymorphism
+//      1.1) Constructor Overloading
+//      1.2) Function Overloading
+//      1.3) Operator Overloading
+
+// 2. Run Time Polymorphism || Dynamic Polymorphism
+//      2.1) Function Overriding
+//      2.2) Virtual Functions
 
 
 
 // 1. Compile Time Polymorphism...............................
-// a) Constructor Overloading is an example of Compile Time Polymorphism
+// 1.1) Constructor Overloading is an example of Compile Time Polymorphism
 
 // class Student {
 //     public:
@@ -38,25 +44,76 @@ they are used.
 
 //>>>>>>>>>>>>>>>>>>>>>>>
 
-// b) Function or Method Overloading 
+// 1.2) Function or Method Overloading 
 // example or implementation of Compile Time Polymorphism
 
-class Print {
-    public:
-        void show(int x) {
-            std::cout << "int: " << x << std::endl;
-        }
+// class Print {
+//     public:
+//         void show(int x) {
+//             std::cout << "int: " << x << std::endl;
+//         }
 
-        void show(char ch) {
-            std::cout << "char: " << ch << std::endl;
-        }
-};
+//         void show(char ch) {
+//             std::cout << "char: " << ch << std::endl;
+//         }
+// };
 
-int main()
-{
-    Print p1;
-    p1.show(354);
-    p1.show('&');
+// int main()
+// {
+//     Print p1;
+//     p1.show(354);
+//     p1.show('&');
 
-    return 0;
-}
+//     return 0;
+// }
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// 1.3) Operator Overloading.........
+//?????????????????????????
+
+
+
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// 2. Run Time Polymorphism || Dynamic Polymorphism .........
+
+// 2.1) Function Overriding ..............
+
+/* Parent & Child both contain the same fucntion with different implementation.
+
+    The parent class function is said to be Overridden & 
+    child class function havs more priority
+
+    Overriding is dependent upon Inheritance
+*/
+
+// class Parent {
+//     public:
+//         void getInfo() {
+//             std::cout << "Parent Class\n";
+//         }
+// };
+
+// class Child : public Parent {
+//     public:
+//         void Info() {
+//             std::cout << "Child Class\n";
+//         }
+// };
+
+// int main()
+// {
+//     // Child c1;
+//     // c1.getInfo();
+//     // c1.Info();
+
+//     Parent p1;
+//     p1.getInfo();
+//     return 0;
+// }
+
+
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// 2.2) Virtual Functions..........................
