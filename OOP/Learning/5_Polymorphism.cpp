@@ -90,8 +90,12 @@ they are used.
 
 class Parent {
     public:
+        Parent() {
+            std::cout << "Parent Constructor\n";
+        }
+
         void Info() {
-            std::cout << "Child Classes\n";
+            std::cout << "Parent Classes\n";
         }
 
         void getInfo() {
@@ -101,9 +105,14 @@ class Parent {
 
 class Child : public Parent {
     public:
+        Child() {
+            std::cout << "Child Constructor\n";
+        }
+
         void Info() {
             std::cout << "Child Classes\n";
         }
+        
         void getInfo() {
             std::cout << "Child Class\n";
         }
@@ -112,12 +121,12 @@ class Child : public Parent {
 int main()
 {
     Child c1;
+    c1.Info();
     c1.getInfo();
-    //c1.Info();
 
-    Parent p1;
-    p1.Info();
-
+    // Parent p1;
+    // p1.Info();
+    // p1.getInfo();
 
     return 0;
 }
