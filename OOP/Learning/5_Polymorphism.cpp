@@ -116,4 +116,38 @@ they are used.
 
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// 2.2) Virtual Functions..........................
+// 2.2) Virtual Functions.......................... Similar to Overriding
+/* A Virtual function is a member function that you expect to be redefined in derived classes. */
+// keyword is 'virtual'  //
+
+class Parent {
+    public:
+        void getInfo() {
+            std::cout << "Parent Class\n";
+        }
+
+        virtual void hello() {
+            std::cout << "Hello from Parent\n";
+        }
+};
+
+class Child : public Parent {
+    public:
+        void Info() {
+            std::cout << "Child Class\n";
+        }
+
+        // Re-implement...............
+        void hello() {
+            std::cout << "Hello from Child\n";
+        }
+};
+
+int main()
+{
+    Child c1;
+    c1.hello();
+
+    
+    return 0;
+}
