@@ -69,7 +69,73 @@ they are used.
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // 1.3) Operator Overloading.........
-//?????????????????????????
+
+// class Demo {
+//     public:
+//         int a;
+
+//     Demo() {
+//         std::cout << "Enter value for a: ";
+//         std::cin >> a;
+
+//     }
+    
+//     // xx object, yy.a int
+//     Demo operator+(Demo yy) {
+//         Demo zz;
+//         zz.a = this->a + yy.a;
+//         return zz;
+//     }
+// };
+
+// int main()
+// {
+//     Demo xx;
+//     Demo yy;
+//     Demo zz = xx + yy;
+//     std::cout << zz.a;
+
+//     return 0;
+// }
+
+
+// or, this >>>>>>>>>>>>>>>>>>>
+
+
+// class Demo {
+// public:
+//     int a;
+
+//     Demo() {
+//         std::cin >> a;
+//     }
+
+//     Demo operator+(Demo yy) {
+//         Demo zz;
+//         zz.a = a + yy.a;
+//         return zz;
+//     }
+// };
+
+// int main() {
+//     Demo xx;
+//     Demo yy;
+
+//     Demo zz = xx + yy;
+
+//     std::cout << zz.a;
+// }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -88,48 +154,48 @@ they are used.
     Overriding is dependent upon Inheritance
 */
 
-class Parent {
-    public:
-        Parent() {
-            std::cout << "Parent Constructor\n";
-        }
+// class Parent {
+//     public:
+//         Parent() {
+//             std::cout << "Parent Constructor\n";
+//         }
 
-        void Info() {
-            std::cout << "Parent Classes\n";
-        }
+//         void Info() {
+//             std::cout << "Parent Classes\n";
+//         }
 
-        void getInfo() {
-            std::cout << "Parent Class\n";
-        }
-};
+//         void getInfo() {
+//             std::cout << "Parent Class\n";
+//         }
+// };
 
-class Child : public Parent {
-    public:
-        Child() {
-            std::cout << "Child Constructor\n";
-        }
+// class Child : public Parent {
+//     public:
+//         Child() {
+//             std::cout << "Child Constructor\n";
+//         }
 
-        void Info() {
-            std::cout << "Child Classes\n";
-        }
+//         void Info() {
+//             std::cout << "Child Classes\n";
+//         }
         
-        void getInfo() {
-            std::cout << "Child Class\n";
-        }
-};
+//         void getInfo() {
+//             std::cout << "Child Class\n";
+//         }
+// };
 
-int main()
-{
-    Child c1;
-    c1.Info();
-    c1.getInfo();
+// int main()
+// {
+//     Child c1;
+//     c1.Info();
+//     c1.getInfo();
 
-    // Parent p1;
-    // p1.Info();
-    // p1.getInfo();
+//     // Parent p1;
+//     // p1.Info();
+//     // p1.getInfo();
 
-    return 0;
-}
+//     return 0;
+// }
 
 
 
@@ -179,3 +245,9 @@ int main()
 
 //     return 0;
 // }
+
+
+
+
+
+
