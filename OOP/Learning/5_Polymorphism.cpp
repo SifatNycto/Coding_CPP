@@ -128,7 +128,86 @@ they are used.
 
 
 
+// Operator overloading .............
+// class Complex {
+//     private:
+//         int real, imag;
+//     public:
+    
+//         Complex(int r = 0, int i = 0) {
+//             real = r;
+//             imag = i;
+//         }
 
+//         Complex operator+(const Complex &obj) {
+//             Complex res;
+//             res.imag = imag + obj.imag;
+//             res.real = real + obj.real;
+//             return res;
+//         }
+
+//         void display() {
+//             std::cout << real << " + " << imag << "i" << std::endl;
+//         }
+// };
+
+// int main()
+// {
+//     Complex c1(12,7);
+//     Complex c2(6,7);
+//     Complex c3 = c1 + c2;
+    
+//     c3.display();
+
+//     return 0;
+// }
+
+
+// Operator overloading ............. another way
+// class Complex {
+//     private:
+//         int real, imag;
+//     public:
+    
+//         //Complex(int r = 0, int i = 0) : real(r), imag(i) {}
+
+//         void getInfo() {
+//             std::cout << "\nenter value of real: ";
+//             std::cin >> real;
+//             std::cout << "\nenter value of imag: ";
+//             std::cin >> imag;
+
+//         }
+
+//         Complex operator+(const Complex &obj) {
+//             Complex res;
+//             res.imag = imag + obj.imag;
+//             res.real = real + obj.real;
+//             return res;
+//         }
+
+//         void display() {
+//             std::cout << std::endl << real << " + " << imag << "i" << std::endl;
+//         }
+// };
+
+// int main()
+// {
+//     Complex c1;
+//     Complex c2;
+
+//     c1.getInfo();
+//     c2.getInfo();
+
+//     Complex c3 = c1 + c2;
+    
+//     c1.display();
+//     c2.display();
+
+//     c3.display();
+
+//     return 0;
+// }
 
 
 
@@ -225,7 +304,7 @@ they are used.
 
 // class Child : public Parent {
 //     public:
-//         void Info() {
+//         void getInfo() {
 //             std::cout << "Child Class\n";
 //         }
 
@@ -237,11 +316,26 @@ they are used.
 
 // int main()
 // {
-//     Child c1;
-//     c1.hello();
-
-//     Parent p1;
-//     p1.hello();
+//     Child c;
+//     Parent p;
+//     p.hello();
 
 //     return 0;
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
