@@ -162,8 +162,63 @@ imag +, real +
 
 
 
-// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ==
+// // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ==
+// class Demo {
+//     public:
+//         int x;
+
+//         // Demo(int x) {
+//         //     this->x = x;
+//         //     //std::cin >> x;
+//         // }
+
+//         void getInfo() {
+//             std::cin >> x;
+//         }
+//         bool operator==(Demo b) {
+//             if (x == b.x)
+//                 return true;
+//             else
+//                 return false;
+//         }
+        
+// };
+
+// int main()
+// {
+//     Demo a, b;
+
+//     std::cout << "\nEnter value of x for object a: ";
+//     a.getInfo();
+//     std::cout << "\nEnter value of x for object b: ";
+//     b.getInfo();
+
+//     if (a == b)
+//         std::cout << "\nValues are identical.";
+//     else
+//         std::cout << "\nValues are different.";
+    
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> +=
 class Demo {
     public:
-        
+        int x;
+
+        void getInfo() {
+            
+        }
+};
+
+int main()
+{
+    
 }
