@@ -50,7 +50,12 @@
 //         int real;
 //         int imag;
 
-//         Complex(int r, int i) : real(r), imag(i) {}
+//         //Complex(int r, int i) : real(r), imag(i) {}
+
+//         Complex(int r, int i) {
+//             real = r;
+//             imag = i;
+//         }
 
 //         Complex operator-(Complex b) {
 //             Complex c(0,0);
@@ -84,6 +89,7 @@
 
 //     return 0;
 // }
+
 /*
  imag -, real -
      2+3i
@@ -209,16 +215,48 @@ imag +, real +
 
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> +=
+// class Demo {
+//     public:
+//         int x;
+
+//         void getInfo() {
+//             std::cin >> x;
+//         }
+
+//         void operator+=(Demo obj) {
+//             x += obj.x;
+//         }
+// };
+
+// int main()
+// {
+//     Demo a;
+//     Demo b;
+
+//     std::cout << "\nEnter value of x for object a: ";
+//     a.getInfo();
+//     std::cout << "\nEnter value of x for object b: ";
+//     b.getInfo();
+
+//     std::cout << "\nBefore a.x: " << a.x;
+//     std::cout << "\nBefore b.x: " << b.x;
+
+//     a += b;
+
+//     std::cout << "\nAfter a.x: " << a.x;
+//     std::cout << "\nAfter b.x: " << b.x;
+
+//     return 0;
+    
+// }
+
+
+
+// ...................................................
+
 class Demo {
     public:
         int x;
 
-        void getInfo() {
-            
-        }
-};
-
-int main()
-{
-    
+        Demo
 }
