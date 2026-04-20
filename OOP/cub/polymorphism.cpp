@@ -252,11 +252,34 @@ imag +, real +
 
 
 
-// ...................................................
+//  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ++prefix
 
 class Demo {
     public:
         int x;
 
-        Demo
+        void getInfo() {
+            std::cin >> x;
+        }
+        void operator++() {
+            x = x + 1;
+        }
 };
+
+int main()
+{
+    Demo a;
+    std::cout << "\nEnter value of x: ";
+    a.getInfo();
+
+    std::cout << "\nBefore ++a a.x: " << a.x;
+    
+    ++a;
+
+    std::cout << "\nAfter ++a a.x: " << a.x;
+
+    std::cout << "\nAfter 2nd time a.x: " << a.x;
+
+    return 0;
+
+}
