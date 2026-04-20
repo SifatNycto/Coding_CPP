@@ -254,32 +254,163 @@ imag +, real +
 
 //  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ++prefix
 
-class Demo {
-    public:
-        int x;
+// class Demo {
+//     public:
+//         int x;
 
-        void getInfo() {
-            std::cin >> x;
-        }
-        void operator++() {
-            x = x + 1;
-        }
-};
+//         void getInfo() {
+//             std::cin >> x;
+//         }
+//         Demo operator++(int) {
+//             Demo temp = *this;
+//             x++;
+//             return temp;
+//         }
+// };
 
-int main()
-{
-    Demo a;
-    std::cout << "\nEnter value of x: ";
-    a.getInfo();
+// int main()
+// {
+//     Demo a;
+//     std::cout << "\nEnter value of x: ";
+//     a.getInfo();
 
-    std::cout << "\nBefore ++a a.x: " << a.x;
+//     std::cout << "\nBefore ++a a.x: " << a.x;
     
-    ++a;
+//     a++;
 
-    std::cout << "\nAfter ++a a.x: " << a.x;
+//     std::cout << "\nAfter ++a a.x: " << a.x;
 
-    std::cout << "\nAfter 2nd time a.x: " << a.x;
+//     std::cout << "\nAfter 2nd time a.x: " << a.x;
 
-    return 0;
+//     return 0;
 
-}
+// }
+
+
+
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>....................
+// prefix chatgpt
+
+// class Demo {
+// public:
+//     int x;
+
+//     Demo(int val = 0) {
+//         x = val;
+//     }
+
+//     // Prefix ++
+//     Demo& operator++() {
+//         ++x;          // increment first
+//         return *this; // return updated object
+//     }
+// };
+
+// int main() {
+//     Demo a(5);
+
+//     ++a;
+
+//     std::cout << a.x << std::endl; // 6
+
+//     return 0;
+// }
+
+
+
+// postfix chatgpt
+
+// class Demo {
+// public:
+//     int x;
+
+//     Demo(int val = 0) {
+//         x = val;
+//     }
+
+//     // Postfix ++
+//     Demo operator++(int) {
+//         Demo temp = *this; // save old value
+//         x++;               // increment
+//         return temp;       // return old value
+//     }
+// };
+
+// int main() {
+//     Demo a(5);
+
+//     a++;
+
+//     std::cout << a.x << std::endl; // 6
+
+//     return 0;
+// }
+
+
+
+// last prefix ...........................................
+
+
+// using namespace std;
+
+// class Number {
+// public:
+//     int a;
+
+//     Number(int x) { a = x; }
+
+//     Number& operator++() {
+//         cout << "\n[Prefix] Before increment: " << a;
+//         ++a;
+//         cout << "\n[Prefix] After increment: " << a;
+//         return *this;
+//     }
+// };
+
+// int main() {
+//     Number n(5);
+
+//     cout << "\nInitial value: " << n.a;
+
+//     cout << "\nValue used in expression (++n): " << (++n).a;
+
+//     cout << "\nFinal value of n: " << n.a;
+
+//     return 0;
+// }
+
+
+
+// last postfix ..................................................
+
+
+// using namespace std;
+
+// class Number {
+// public:
+//     int a;
+
+//     Number(int x) { a = x; }
+
+//     Number operator++(int) {
+//         cout << "\n[Postfix] Before increment: " << a;
+//         Number temp = *this;
+//         a++;
+//         cout << "\n[Postfix] After increment: " << a;
+//         return temp;
+//     }
+// };
+
+// int main() {
+//     Number n(5);
+
+//     cout << "\nInitial value: " << n.a;
+
+//     cout << "\nValue used in expression (n++): " << (n++).a;
+
+//     cout << "\nFinal value of n: " << n.a;
+
+//     return 0;
+// }
