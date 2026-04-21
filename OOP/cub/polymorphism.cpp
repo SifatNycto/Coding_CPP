@@ -617,41 +617,41 @@ imag +, real +
 
 // Operator Overloading With -=
 
-// class ShortHand {
-//     public:
-//         int x;
+class ShortHand {
+    public:
+        int x;
 
-//         void getInfo() {
-//             std::cin >> x;
-//         }
+        void getInfo() {
+            std::cin >> x;
+        }
 
-//         void operator-=(ShortHand obj) {
-//             x += obj.x;
-//         }
-// };
+        void operator-=(ShortHand obj) {
+            x -= obj.x;
+        }
+};
 
-// int main()
-// {
-//     ShortHand a;
-//     ShortHand b;
+int main()
+{
+    ShortHand a;
+    ShortHand b;
 
-//     std::cout << "\nEnter value of 'x' for object 'a' -> a.x: ";
-//     a.getInfo();
-//     std::cout << "\nEnter value of 'x' for object 'b' -> b.x: ";
-//     b.getInfo();
+    std::cout << "\nEnter value of 'x' for object 'a' -> a.x: ";
+    a.getInfo();
+    std::cout << "\nEnter value of 'x' for object 'b' -> b.x: ";
+    b.getInfo();
 
-//     std::cout << "\nBefore -> a.x: " << a.x;
-//     std::cout << "\nBefore -> b.x: " << b.x;
+    std::cout << "\nBefore -> a.x: " << a.x;
+    std::cout << "\nBefore -> b.x: " << b.x;
 
-//     a -= b;
+    a -= b;
 
-//     std::cout << std::endl;
+    std::cout << std::endl;
 
-//     std::cout << "\nAfter -> a.x: " << a.x;
-//     std::cout << "\nAfter -> b.x: " << b.x;
+    std::cout << "\nAfter -> a.x: " << a.x;
+    std::cout << "\nAfter -> b.x: " << b.x;
 
-//     return 0;
-// }
+    return 0;
+}
 
 
 
@@ -839,39 +839,39 @@ imag +, real +
 
 // Operator Overloading With Postfix--
 
-class Postfix {
-    public:
-        int x;
+// class Postfix {
+//     public:
+//         int x;
 
-        void getInfo() {
-            std::cin >> x;
-        }
+//         void getInfo() {
+//             std::cin >> x;
+//         }
 
-        Postfix operator--(int) {
-            Postfix Temporary = *this;
-            x--;
-            return Temporary;
-        }
-};
+//         Postfix operator--(int) {
+//             Postfix Temporary = *this;
+//             x--;
+//             return Temporary;
+//         }
+// };
 
-int main()
-{
-    Postfix post;
+// int main()
+// {
+//     Postfix post;
 
-    std::cout << "\nEnter value of 'x' for object 'post' -> post.x: ";
-    post.getInfo();
+//     std::cout << "\nEnter value of 'x' for object 'post' -> post.x: ";
+//     post.getInfo();
 
-    std::cout << "\nEntered value of 'x' -> post.x: " << post.x;
+//     std::cout << "\nEntered value of 'x' -> post.x: " << post.x;
 
-    std::cout << "\n\nBefore post--";
+//     std::cout << "\n\nBefore post--";
 
-    std::cout << "\n\"Used\" post.x: " << post.x;
+//     std::cout << "\n\"Used\" post.x: " << post.x;
 
-    post--;
+//     post--;
 
-    std::cout << "\n\nAfter post--";
+//     std::cout << "\n\nAfter post--";
     
-    std::cout << "\nThen \"Decreased\" post.x: " << post.x;
+//     std::cout << "\nThen \"Decreased\" post.x: " << post.x;
 
-    return 0;
-}
+//     return 0;
+// }
