@@ -414,3 +414,464 @@ imag +, real +
 
 //     return 0;
 // }
+
+
+
+
+
+
+
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+
+
+
+
+
+
+
+
+// Operator Overloading With +
+
+// class Sum {
+//     public:
+//         int x;
+
+//         Sum(int xx = 0) : x(xx) {}
+
+//         Sum operator+(Sum obj) {
+//             Sum c;
+//             c.x = x + obj.x;
+//             return c;
+//         }
+// };
+
+// int main()
+// {
+//     Sum a(2);
+//     Sum b(3);
+
+//     std::cout << "\nValue of 'x' for object 'a' -> a.x: " << a.x;
+//     std::cout << "\nValue of 'x' for object 'b' -> b.x: " << b.x;
+
+//     Sum c = a + b;
+
+//     std::cout << "\nSummation of object 'a' and object 'b' is: " << c.x;
+
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Operator Overloading With - 
+
+// class Sub {
+//     public:
+//         int x;
+
+//         Sub(int xx) : x(xx) {}
+
+//         Sub operator-(Sub obj) {
+//             Sub c(0);
+//             c.x = x - obj.x;
+//             return c;
+//         }
+// };
+
+// int main()
+// {
+//     Sub a(3);
+//     Sub b(2);
+
+//     std::cout << "\nValue of 'x' for object 'a' -> a.x: " << a.x;
+//     std::cout << "\nValue of 'x' for object 'b' -> b.x: " << b.x;
+
+//     Sub c = a - b;
+
+//     std::cout << "\nSubtraction of object 'a' and 'b' is: " << c.x;
+
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
+
+// Operator Overloading With *
+
+// class Multi {
+//     public:
+//         int x;
+
+//         Multi(int x = 0) {
+//             this->x = x;
+//         }
+
+//         Multi operator*(Multi obj) {
+//             Multi c;
+//             c.x = x * obj.x;
+//             return c;
+//         }
+// };
+
+// int main()
+// {
+//     Multi a(2);
+//     Multi b(3);
+
+//     std::cout << "\nValue of 'x' for object 'a' -> a.x: " << a.x;
+//     std::cout << "\nValue of 'x' for object 'b' -> b.x: " << b.x;
+
+//     Multi c = a * b;
+
+//     std::cout << "\nMultiplication of object 'a' and 'b' is: " << c.x;
+
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Operator Overloading With /
+
+// class Div {
+//     public:
+//         int x;
+
+//         Div(int x) {
+//             this->x = x;
+//         }
+
+//         Div operator/(Div obj) {
+//             Div c(0);
+//             c.x = x / obj.x;
+//             return c;
+//         }
+// };
+
+// int main()
+// {
+//     Div a(3);
+//     Div b(2);
+
+//     std::cout << "\nValue of 'x' for object 'a' -> a.x: " << a.x;
+//     std::cout << "\nValue of 'x' for object 'b' -> b.x: " << b.x;
+
+//     Div c = a / b;
+
+//     std::cout << "\nDivision of object 'a' and 'b' is: " << c.x;
+
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Operator Overloading With -=
+
+// class ShortHand {
+//     public:
+//         int x;
+
+//         void getInfo() {
+//             std::cin >> x;
+//         }
+
+//         void operator-=(ShortHand obj) {
+//             x += obj.x;
+//         }
+// };
+
+// int main()
+// {
+//     ShortHand a;
+//     ShortHand b;
+
+//     std::cout << "\nEnter value of 'x' for object 'a' -> a.x: ";
+//     a.getInfo();
+//     std::cout << "\nEnter value of 'x' for object 'b' -> b.x: ";
+//     b.getInfo();
+
+//     std::cout << "\nBefore -> a.x: " << a.x;
+//     std::cout << "\nBefore -> b.x: " << b.x;
+
+//     a -= b;
+
+//     std::cout << std::endl;
+
+//     std::cout << "\nAfter -> a.x: " << a.x;
+//     std::cout << "\nAfter -> b.x: " << b.x;
+
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Operator Overloading With =
+
+// class Equal {
+//     public:
+//         int x;
+//         int y;
+
+//         void getInfoA() {
+//             std::cin >> x;
+//         }
+//         void getInfoB() {
+//             std::cin >> y;
+//         }
+
+//         void operator=(Equal obj) {
+//             x = obj.y;
+//         }
+// };
+
+// int main()
+// {
+//     Equal a;
+//     Equal b;
+
+//     std::cout << "\nEnter value of 'x' for object 'a' -> a.x: ";
+//     a.getInfoA();
+//     std::cout << "\nEnter value of 'y' for object 'b' -> b.y: ";
+//     b.getInfoB();
+
+//     std::cout << "\nBefore -> a.x: " << a.x;
+//     std::cout << "\nBefore -> b.y: " << b.y;
+
+//     a = b;
+
+//     std::cout << std::endl;
+
+//     std::cout << "\nAfter -> a.x: " << a.x;
+//     std::cout << "\nAfter -> b.y: " << b.y;
+
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+// Operator Overloading With ==
+
+// class Bool {
+//     public:
+//         int x;
+//         int y;
+
+//         void getInfoA() {
+//             std::cin >> x;
+//         }
+//         void getInfoB() {
+//             std::cin >> y;
+//         }
+
+//         bool operator==(Bool obj) {
+//             if (x == obj.y)
+//                 return true;
+//             else
+//                 return false;
+//         }
+// };
+
+// int main()
+// {
+//     Bool a;
+//     Bool b;
+
+//     std::cout << "\nEnter value of 'x' for object 'a' -> a.x: ";
+//     a.getInfoA();
+//     std::cout << "\nEnter value of 'y' for object 'b' -> b.y: ";
+//     b.getInfoB();
+
+//     std::cout << "\n-> a.x: " << a.x;
+//     std::cout << "\n-> b.y: " << b.y;
+
+//     std::cout << std::endl;
+
+//     if (a == b)
+//         std::cout << "\nObject A and Object B are Equal.";
+//     else
+//         std::cout << "\nObject A and Object B are not Equal.";
+
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Operator Overloading With --Prefix
+
+// class Prefix {
+//     public:
+//         int x;
+
+//         void getInfo() {
+//             std::cin >> x;
+//         }
+
+//         Prefix& operator--() {
+//             --x;
+//             return *this;
+//         }
+// };
+
+// int main()
+// {
+//     Prefix pre;
+
+//     std::cout << "\nEnter value of 'x' for object 'pre' -> pre.x: ";
+//     pre.getInfo();
+
+//     std::cout << "\nEntered value of 'x' -> pre.x: " << pre.x;
+
+//     --pre;
+
+//     std::cout << "\nAfter --pre";
+    
+//     std::cout << "\n\n\"Decreased\" pre.x: " << pre.x;
+    
+//     std::cout << "\n\nThen \"Used\" pre.x: " << pre.x;
+
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Operator Overloading With Postfix--
+
+class Postfix {
+    public:
+        int x;
+
+        void getInfo() {
+            std::cin >> x;
+        }
+
+        Postfix operator--(int) {
+            Postfix Temporary = *this;
+            x--;
+            return Temporary;
+        }
+};
+
+int main()
+{
+    Postfix post;
+
+    std::cout << "\nEnter value of 'x' for object 'post' -> post.x: ";
+    post.getInfo();
+
+    std::cout << "\nEntered value of 'x' -> post.x: " << post.x;
+
+    std::cout << "\n\nBefore post--";
+
+    std::cout << "\n\"Used\" post.x: " << post.x;
+
+    post--;
+
+    std::cout << "\n\nAfter post--";
+    
+    std::cout << "\nThen \"Decreased\" post.x: " << post.x;
+
+    return 0;
+}
