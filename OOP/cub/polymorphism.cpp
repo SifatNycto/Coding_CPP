@@ -630,6 +630,7 @@ class ShortHand {
         }
 };
 
+
 int main()
 {
     ShortHand a;
