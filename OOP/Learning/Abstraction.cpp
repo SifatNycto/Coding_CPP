@@ -16,6 +16,8 @@ classes can be derived.
 define an interface for derived classed.
 */
 // by pure functions the associate class become auto abstract class
+
+
 // Abstract Class
 class Shape {
     virtual void draw() = 0;    // Pure Virtual Function
@@ -34,4 +36,4 @@ int main()
     c.draw();
 
     return 0;
-}
+} 
