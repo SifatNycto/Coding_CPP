@@ -30,6 +30,8 @@ Properties Constructor>>
 copy properties of one object into another.*/
 
 
+
+
 // class Teacher {
 // private:
 //     double salary;  // For making salary private for Admin access
@@ -93,43 +95,99 @@ copy properties of one object into another.*/
 
 // Shallow Copy vs Deep Copy >>>>>>>>>>>>>>>>>>>>>>>>>>
 
-class Student {
+// class Student {
+//     public:
+//         std::string name;
+//         //double cgpa;
+//         double* cgpaPtr;
+
+//         Student(std::string name, double cgpa) {
+//             this->name = name;
+//             cgpaPtr = new double;
+//             *cgpaPtr = cgpa;
+//         }
+
+//         // for deep copy || custom
+//         Student(Student &orgObj) {
+//             this->name = orgObj.name;
+//             cgpaPtr = new double;
+//             *cgpaPtr = *orgObj.cgpaPtr;
+//         }
+  
+//         void getInfo() {
+//             std::cout << "name: " << name << std::endl;
+//             std::cout << "cgpa: " << *cgpaPtr << std::endl;
+//         }
+// };
+
+// int main()
+// {
+//     Student s1("Rahul Kumar", 8.9);
+    
+//     Student s2(s1);
+    
+//     s1.getInfo();
+//     *(s2.cgpaPtr) = 9.2;
+//     s1.getInfo();
+
+//     s2.name = "Neha Kumar";
+//     s2.getInfo();
+
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// prac constructor
+
+class Teacher {
+    private:
+        double salary;
+
     public:
         std::string name;
-        //double cgpa;
-        double* cgpaPtr;
+        std::string dept;
+        std::string subject;
 
-        Student(std::string name, double cgpa) {
+        Teacher() {
+            dept = "Computer Science";
+        }
+
+        Teacher(std::string name, std::string dept, std::string subject, double salary) {
             this->name = name;
-            cgpaPtr = new double;
-            *cgpaPtr = cgpa;
+            this->dept = dept;
+            this->subject = subject;
+            this->salary = salary;
         }
 
-        // for deep copy || custom
-        Student(Student &orgObj) {
-            this->name = orgObj.name;
-            cgpaPtr = new double;
-            *cgpaPtr = *orgObj.cgpaPtr;
+        void changeDept(std::string newDept) {
+            dept = newDept;
         }
-  
+
         void getInfo() {
-            std::cout << "name: " << name << std::endl;
-            std::cout << "cgpa: " << *cgpaPtr << std::endl;
+            std::cout << "\nName: " << name;
+            std::cout << "\nSubject: " << subject;
+            std::cout << "\nDepartment: " << dept;
         }
+
 };
 
 int main()
 {
-    Student s1("Rahul Kumar", 8.9);
-    
-    Student s2(s1);
-    
-    s1.getInfo();
-    *(s2.cgpaPtr) = 9.2;
-    s1.getInfo();
+    Teacher t1("Shradha", "Computer Science & Engineering", "C++", 25000);
 
-    s2.name = "Neha Kumar";
-    s2.getInfo();
+    Teacher t2(t1);
+
+    t2.getInfo();
 
     return 0;
 }

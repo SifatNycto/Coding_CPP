@@ -30,10 +30,21 @@ class Circle : public Shape {
         }
 };
 
+class Rectangle : public Shape {
+    public:
+        void draw() {
+            std::cout << "\nDrawing a Rectangle.";
+        }
+};
+
 int main()
 {
     Circle c;
+    Rectangle r;
+    
     c.draw();
+
+    r.draw();
 
     return 0;
 } 
