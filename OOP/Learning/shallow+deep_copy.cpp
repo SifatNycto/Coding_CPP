@@ -9,6 +9,7 @@
     # Shallow Copy ==>
         A shallow copy of an object copies all of the member values 
         from one object to another.
+            (it is used most of the time, copy or custom copy constructor make this.)
     
     # Deep Copy ==>
         A deep copy not only copies the member values, but also makes copies 
@@ -20,50 +21,81 @@
 
 
 
-class Teacher {
-    private:
-        double salary;
+// class Student {
+//     public:
+//         std::string name;
+//         double cgpa;
 
+//         Student(std::string name, double cgpa) {
+//             this->name = name;
+//             this->cgpa = cgpa;
+//         }
+
+//         Student(Student &obj) {
+//             this->name = obj.name;
+//             this->cgpa = obj.cgpa;
+//         }
+
+//         void getInfo() {
+//             std::cout << "\nName: " << name;
+//             std::cout << "\nCGPA: " << cgpa;
+//         }
+// };
+
+// int main()
+// {
+//     Student s1("Tony Stark", 3.6);
+    
+//     Student s2(s1);
+//     s2.getInfo();
+
+//     return 0;
+// }
+
+
+
+
+// .......................
+/*
+    Shallow copy works with custom copy constructor or even default copy 
+    constructor with the dynamic memory by pointer
+
+    Deep copy needs custom constructor.
+*/
+
+class Student {
     public:
         std::string name;
-        std::string dept;
-        std::string subject;
+        double* cgpaPtr;
 
-        Teacher(std::string name, std::string dept, std::string subject, double salary) {
+        Student(std::string name, double cgpa) {
+            std::cout << "\ncustom constructor";
             this->name = name;
-            this->dept = dept;
-            this->subject = subject;
-            this->salary = salary;
+            cgpaPtr = new double;
+            *cgpaPtr = cgpa;
         }
 
-        // Copy constructor with pass by reference, original obejects address
-        Teacher(Teacher &originalObject) {
-            std::cout << "\nI'm custom copy constructor";
-            this->name = originalObject.name;
-            this->dept = originalObject.dept;
-            this->subject = originalObject.subject;
-            this->salary = originalObject.salary;
-        }
-
-        void changeDept(std::string newDept) {
-            dept = newDept;
-        }
+        // Student(Student &obj) {
+        //     std::cout << "\ncustom copy constructor";
+        //     this->name = obj.name;
+        //     this->cgpaPtr = obj.cgpaPtr;
+        // }
 
         void getInfo() {
             std::cout << "\nName: " << name;
-            std::cout << "\nSubject: " << subject;
-            std::cout << "\nDepartment: " << dept;
+            std::cout << "\nCGPA: " << *cgpaPtr;
         }
-
 };
 
 int main()
 {
-    Teacher t1("Shradha", "Computer Science & Engineering", "C++", 25000);
+    Student s1("Tony Stark", 3.6);
+    Student s2(s1);
+    
+    s1.getInfo();
 
-    Teacher t2(t1);
-
-    t2.getInfo();
+    *(s2.cgpaPtr) = 3.8;
+    s1.getInfo();
 
     return 0;
 }
