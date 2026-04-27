@@ -14,3 +14,6 @@
 # Temporary files
 *.tmp
 *.cache
+
+# Ignoring files
+Random_CPP/snake.cpp

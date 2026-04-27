@@ -4,6 +4,7 @@
 int main()
 {
     std::string s;
+    
     std::cout << "Enter a string: ";
     std::getline(std::cin, s);
 
