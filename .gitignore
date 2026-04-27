@@ -16,5 +16,5 @@
 *.cache
 
 # Ignoring files
-Random_CPP/snake.cpp
+snake.cpp
 tempCodeRunnerFile.cpp
