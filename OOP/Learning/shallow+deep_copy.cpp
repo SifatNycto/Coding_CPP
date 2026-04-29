@@ -63,6 +63,53 @@
     Deep copy needs custom constructor.
 */
 
+// class Student {
+//     public:
+//         std::string name;
+//         double* cgpaPtr;
+
+//         Student(std::string name, double cgpa) {
+//             std::cout << "\ncustom constructor";
+//             this->name = name;
+//             cgpaPtr = new double;
+//             *cgpaPtr = cgpa;
+//         }
+
+//         // with or without this 
+//         Student(Student &obj) {
+//             std::cout << "\ncustom copy constructor";
+//             this->name = obj.name;
+//             this->cgpaPtr = obj.cgpaPtr;
+//         }
+
+//         void getInfo() {
+//             std::cout << "\nName: " << name;
+//             std::cout << "\nCGPA: " << *cgpaPtr;
+//         }
+// };
+
+// int main()
+// {
+//     Student s1("Tony Stark", 3.6);
+//     Student s2(s1);
+    
+//     s1.getInfo();
+
+//     *(s2.cgpaPtr) = 3.8;
+//     s1.getInfo();
+
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+// .........................
+
 class Student {
     public:
         std::string name;
@@ -75,11 +122,12 @@ class Student {
             *cgpaPtr = cgpa;
         }
 
-        // Student(Student &obj) {
-        //     std::cout << "\ncustom copy constructor";
-        //     this->name = obj.name;
-        //     this->cgpaPtr = obj.cgpaPtr;
-        // }
+        // with or without this 
+        Student(Student &obj) {
+            std::cout << "\ncustom copy constructor";
+            this->name = obj.name;
+            this->cgpaPtr = obj.cgpaPtr;
+        }
 
         void getInfo() {
             std::cout << "\nName: " << name;
@@ -98,4 +146,4 @@ int main()
     s1.getInfo();
 
     return 0;
-}
+} 
