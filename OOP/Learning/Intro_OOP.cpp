@@ -199,58 +199,67 @@ these phenomena's are called in Programming as 'Consturctor Overloading' */
 copy properties of one object into another.*/
 
 
-class Teacher {
-private:
-    double salary;  // For making salary private for Admin access
+// class Teacher {
+// private:
+//     double salary;  // For making salary private for Admin access
 
-public:
-    // Properties
-    std::string name;
-    std::string dept;
-    std::string subject;
+// public:
+//     // Properties
+//     std::string name;
+//     std::string dept;
+//     std::string subject;
 
-    // Non-parameterized constructor
-    Teacher() {
-        dept = "Computer Science";
-    }
+//     // Non-parameterized constructor
+//     Teacher() {
+//         dept = "Computer Science";
+//     }
 
-    // Parameterized constructor
-    Teacher(std::string name, std::string dept, std::string subject, double salary) {
-        // For accessing obj prop
-        // object property = constructor parameter
-        this->name = name;
-        this->dept = dept;
-        this->subject = subject;
-        this->salary = salary;
-    }
+//     // Parameterized constructor
+//     Teacher(std::string name, std::string dept, std::string subject, double salary) {
+//         // For accessing obj prop
+//         // object property = constructor parameter
+//         this->name = name;
+//         this->dept = dept;
+//         this->subject = subject;
+//         this->salary = salary;
+//     }
 
-    // Methods
-    void change_dept(std::string new_dept) {
-        dept = new_dept;
-    }
+//     // Methods
+//     void change_dept(std::string new_dept) {
+//         dept = new_dept;
+//     }
 
-    void get_info() {
-        std::cout << std::endl << "Name: " << name;
-        std::cout << std::endl << "Subject: " << subject;
-        std::cout << std::endl << "Department: " << dept;
-        std::cout << std::endl << "Salary: " << salary;
-    }
-};
+//     void get_info() {
+//         std::cout << std::endl << "Name: " << name;
+//         std::cout << std::endl << "Subject: " << subject;
+//         std::cout << std::endl << "Department: " << dept;
+//         std::cout << std::endl << "Salary: " << salary;
+//     }
+// };
 
 
-int main()
-{
-    // Object created || Here, Constructor call
-    // this points the calling object t1
-    // for which the constructor is called
-    Teacher t1("Rumaia Rahman Mridula", "CS", "OOP", 50000);
+// int main()
+// {
+//     // Object created || Here, Constructor call
+//     // this points the calling object t1
+//     // for which the constructor is called
+//     Teacher t1("Rumaia Rahman Mridula", "CS", "OOP", 50000);
     
-    t1.get_info();
+//     t1.get_info();
 
-    //Teacher t2(t1); // Default copy constructor -invoked
-    //t2.get_info();
+//     //Teacher t2(t1); // Default copy constructor -invoked
+//     //t2.get_info();
 
-    return 0;
-}
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
 
 
