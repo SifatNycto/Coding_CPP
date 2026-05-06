@@ -28,7 +28,7 @@ int main()
         }
     }
 
-    s1.clear;
+    s1.clear();
 
     for (int i = 0; i < s2.size(); i++)
     {
