@@ -119,6 +119,7 @@
 #include <thread>
 #include <chrono>
 
+using namespace std;
 using namespace chrono_literals;
 
 int main()
@@ -134,24 +135,24 @@ int main()
 }
 
 
-#include <iostream>
-#include <thread>
-#include <chrono>
+// #include <iostream>
+// #include <thread>
+// #include <chrono>
 
-using namespace std::chrono_literals;
+// using namespace std::chrono_literals;
 
-int main()
-{
-    int i = 5;
+// int main()
+// {
+//     int i = 5;
 
-    std::cout << "Loading";
+//     std::cout << "Loading";
 
-    while(i--)
-    {
-        std::this_thread::sleep_for(300ms);
+//     while(i--)
+//     {
+//         std::this_thread::sleep_for(300ms);
 
-        std::cout << "." << std::endl;
-    }
+//         std::cout << "." << std::endl;
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
