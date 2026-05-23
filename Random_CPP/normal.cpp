@@ -33,9 +33,9 @@ void Cat() {
 
 
 
-// private:
-//     int wins;
-//     int losses;
+private:
+    int wins;
+    int losses;
 
 
 
