@@ -56,6 +56,7 @@ class customer {
             this->acc_no = acc_no;
         }
 
+
         //deposit
         void deposit(int amount) {
             if(amount > 0) {
@@ -92,6 +93,7 @@ int main()
     catch(const char *e) {
         std::cout << "Exception Occured: " << e << std::endl;
     }
+    
 
     return 0;
 }
