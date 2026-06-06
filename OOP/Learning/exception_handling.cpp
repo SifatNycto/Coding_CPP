@@ -43,6 +43,8 @@ Catch
 
 
 
+#include <string>
+#include <iostream>
 
 
 class customer {
@@ -93,7 +95,8 @@ int main()
     catch(const char *e) {
         std::cout << "Exception Occured: " << e << std::endl;
     }
-    
+
+    std::cout << "there is and erro"
 
     return 0;
 }
