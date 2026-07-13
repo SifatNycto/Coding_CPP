@@ -10,25 +10,25 @@
 
 // no return, with argument
 
-// void sum(int x, int y);
+void sum(int x, int y);
 
-// int main()
-// {
-//     int a = 2, b = 4;
+int main()
+{
+    int a = 2, b = 4;
 
-//     sum(a, b);
+    sum(a, b);
 
-//     return 0;
-// }
+    return 0;
+}
 
-// void sum(int x, int y) {
-//     std::cout << "the sum is: " << x + y;
-// }
-
-
+void sum(int x, int y) {
+    std::cout << "the sum is: " << x + y;
+}
 
 
-// with return, with argument >>>>>>>>>>>
+
+
+// // with return, with argument >>>>>>>>>>>
 
 // int sum(int x, int y);
 
@@ -55,6 +55,7 @@
 
 
 // return, no argument
+
 // int sum();
 
 // int main()
@@ -69,7 +70,6 @@
 
 // int sum() {
 //     int a = 2, b = 4;
-
 //     int c = a + b;
 
 //     return c;
@@ -90,11 +90,9 @@
 
 // void sum() {
 //     // std::cout << "hello";
-
 //     // std::cout << 5 + 6;
 
 //     int a = 2, b = 3;
-
 //     std::cout << a + b;
 // }
 
@@ -131,39 +129,3 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-#include <iostream>
-#include<string>
-int main()
-{
-    int i;
-    std::cout << "How much Multiplication do you need?" << std::endl;
-    std::cin >> i;
-
-    int fuck[i];
-
-    for(int k = 1; k <= i; k++)
-    {
-        std::cout << "Enter a number" << std::endl;
-        std::cin >> fuck[k];
-
-        std::cout << "The number is:" << fuck[k] << std::endl;
-        std::cout << "The Multiplication Table For " << fuck[k] << std::endl;
-        
-        for(int j = 1; j <= 10; j++)
-        {
-            std::cout << fuck[k] << "*" << j << "=" << fuck[k] * j << std::endl;
-        }
-    }
-    
-    return 0;
-}
