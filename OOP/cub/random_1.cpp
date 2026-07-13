@@ -124,30 +124,68 @@
 //     return 0;
 // }
 
-class Box {
-    public:
-        float height;
-        float width;
-        float depth;
+// class Box {
+//     public:
+//         float height;
+//         float width;
+//         float depth;
         
         
-};
-Box::Box() {
-    std::cout << "I'm default constructor" << std::endl;
-}
+// };
+// Box::Box() {
+//     std::cout << "I'm default constructor" << std::endl;
+// }
 
-void Box::thid(float h, float w, float d) {
-    this->height = h;
-    width = w;
-    depth = d;
-}
+// void Box::thid(float h, float w, float d) {
+//     this->height = h;
+//     width = w;
+//     depth = d;
+// }
 
-float Box::calculateVolume() {
-    return height * width * depth;
-}
+// float Box::calculateVolume() {
+//     return height * width * depth;
+// }
 
-int main()
-{
-    Box mybox(5, 4, 3);
+// int main()
+// {
+//     Box mybox(5, 4, 3);
 
-}
+// }
+
+
+
+
+
+
+
+
+// void Hello();
+
+// int main()
+// {
+//     Hello();
+//     return 0;
+// }
+
+// void Hello() {
+//     std::cout << "hello world";
+// }
+
+
+
+// class Hello {
+//     public:
+//         void hi() {
+//             std::cout << "hello world";
+//         }
+// };
+
+// int main()
+// {
+//     Hello world;
+
+//     world.hi();
+
+//     return 0;
+// }
+

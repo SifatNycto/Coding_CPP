@@ -1,30 +1,41 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
-class Animal {
+class print {
     public:
 
-        virtual void dog() {
-            cout << "I'm Dog function" << endl;
+        void hello() {
+            std::cout << "hello world";
         }
-};
 
-
-class Dog : public Animal {
-    public:
-
-    void he() {
-        cout << "dfd" << endl;
-    }
+        void hi() {
+            std::cout << "hi there";
+        }
 };
 
 int main()
 {
-    Dog d;
-    d.dog();
-    d.he();
+    print h;
+
+    h.hello();
+    std::cout << std::endl;
+    h.hi();
 
     return 0;
 }
+
+
+
+
+// struct hello{
+//     int a = 3;
+//     std::string s = "sdfa";
+
+// };
+
+// int main()
+// {
+//     hello h;
+
+//     std::cout << h.a;
+// }
