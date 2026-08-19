@@ -1,5 +1,5 @@
-#include <iostream>
-#include <string>
+// #include <iostream>
+// #include <string>
 
 // 1. fucntion prototype || declaration
 // 2. funciton body
@@ -10,20 +10,20 @@
 
 // no return, with argument
 
-void sum(int x, int y);
+// void sum(int x, int y);
 
-int main()
-{
-    int a = 2, b = 4;
+// int main()
+// {
+//     int a = 2, b = 4;
 
-    sum(a, b);
+//     sum(a, b);
 
-    return 0;
-}
+//     return 0;
+// }
 
-void sum(int x, int y) {
-    std::cout << "the sum is: " << x + y;
-}
+// void sum(int x, int y) {
+//     std::cout << "the sum is: " << x + y;
+// }
 
 
 
@@ -129,3 +129,68 @@ void sum(int x, int y) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <ctime>
+
+int main()
+{
+    srand(time(NULL));
+
+    int n = rand() % 5 + 1;
+
+    std::cout << n;
+
+    /*
+        1. sanny
+        2. dhrubo
+        3. lamia
+        4. mahi
+        5. shihab
+    */
+
+    if (n == 1) std::cout << std::endl << "congrats sanny";
+    else if (n == 2) std::cout << std::endl << "congrats dhrubo";
+    else if (n == 3) std::cout << std::endl << "congrats lamia";
+    else if (n == 4) std::cout << std::endl << "congrats mahi";
+    else std::cout << std::endl << "congrats shihab";
+
+
+    return 0;
+}
+
+
+
+
+
+
+#include <iostream>
+#include <chrono>
+#include <thread>
+
+
+// For Loading animation
+int main()
+{
+    std::cout << "loading";
+
+    for(int i = 0; i < 5; i++)
+    {
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::cout << ".";
+    }
+
+    return 0;
+}

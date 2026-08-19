@@ -359,54 +359,54 @@ C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS
 Code, Compile, Run and Debug online from anywhere in world.
 
 *******************************************************************************/
-#include <iostream>
-#include <string>
-void ans();
-int main()
-{   int i, j, k, l;
-    std::cout <<  "Hey User"  << std:: endl<< std:: endl;
+// #include <iostream>
+// #include <string>
+// void ans();
+// int main()
+// {   int i, j, k, l;
+//     std::cout <<  "Hey User"  << std:: endl<< std:: endl;
     
-    std::cout <<  "  IF YOU WANT " << std:: endl ;
-    std::cout <<  "  Ans so input 1 or ask so input 2" << std:: endl;     
-    std::cout <<  std:: endl;
-    std::cout <<  "Selet one :"; 
-    std::cin  >>  i;
-    std::cout <<  std:: endl;
+//     std::cout <<  "  IF YOU WANT " << std:: endl ;
+//     std::cout <<  "  Ans so input 1 or ask so input 2" << std:: endl;     
+//     std::cout <<  std:: endl;
+//     std::cout <<  "Selet one :"; 
+//     std::cin  >>  i;
+//     std::cout <<  std:: endl;
     
-    if( i == 1) {
-        std:: cout << "Your input is 1"<<std:: endl;
-       ans();
-    }
+//     if( i == 1) {
+//         std:: cout << "Your input is 1"<<std:: endl;
+//        ans();
+//     }
     
-    else if (i==2){
-        std:: cout << "Your input is 2"<<std:: endl;
-    }
+//     else if (i==2){
+//         std:: cout << "Your input is 2"<<std:: endl;
+//     }
     
-    else 
-        std:: cout << "Your input is invalid"<<std:: endl;
+//     else 
+//         std:: cout << "Your input is invalid"<<std:: endl;
     
 
-    return 0;
-}
+//     return 0;
+// }
 
 
-void ans(){
-    int s;
-    std::string t;
-    std::string Q[5]={"how are you?", 
-    "what is your depertment?",
-    "What is your student id?",
-    "What is your name?",
-    "what class do you read in?"};
+// void ans(){
+//     int s;
+//     std::string t;
+//     std::string Q[5]={"how are you?", 
+//     "what is your depertment?",
+//     "What is your student id?",
+//     "What is your name?",
+//     "what class do you read in?"};
     
-    for(int p=0;p<=5;p++){
-       std::cout <<  Q[p]<<std:: endl;
-       std::cout<<std::endl;
+//     for(int p=0;p<=5;p++){
+//        std::cout <<  Q[p]<<std:: endl;
+//        std::cout<<std::endl;
        
-       std::cin.ignore ();
-       getline(std::cin, t );
+//        std::cin.ignore ();
+//        getline(std::cin, t );
        
-       std::cout<<std::endl;
-    }
+//        std::cout<<std::endl;
+//     }
     
-}
+// }
